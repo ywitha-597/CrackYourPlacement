@@ -1,0 +1,12 @@
+// Best time to buy and sell stocks I //
+int maxProfit(vector<int>& prices) {
+        int profit = 0, max_profit = INT_MIN, buy = prices[0];
+        for(int i=0; i<prices.size(); i++){
+            profit = prices[i] - buy;
+            if(profit > max_profit)
+                max_profit = profit;
+            if(prices[i] < buy)
+                buy = prices[i];
+        }
+        return max_profit;
+    }
