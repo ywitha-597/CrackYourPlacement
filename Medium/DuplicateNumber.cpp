@@ -1,5 +1,7 @@
 // Find the duplicate number //
-int findDuplicate(vector<int>& nums) {
+class Solution {
+public:
+    int findDuplicate(vector<int>& nums) {
         int tore = nums[0], hare = nums[0];
         do{
             tore = nums[tore];
@@ -13,3 +15,4 @@ int findDuplicate(vector<int>& nums) {
         }
         return hare;
     }
+};
