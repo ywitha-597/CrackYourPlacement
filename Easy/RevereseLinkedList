@@ -1,0 +1,11 @@
+// Reverse a Linked list //
+ListNode* reverseList(ListNode* head) {
+        ListNode *left = NULL, *right = NULL, *cur = head;
+        while(cur!=NULL){
+            right = cur -> next;
+            cur -> next = left;
+            left = cur;
+            cur = right;
+        }
+        return left;
+}
