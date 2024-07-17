@@ -1,0 +1,11 @@
+// Move Zeroes //
+void moveZeroes(vector<int>& nums) {
+        int n = nums.size();
+        int zp = 0;
+        for(int np=0; np<n; np++){
+            if(nums[np] != 0)
+                nums[zp++] = nums[np];
+        }
+        while(zp < n)
+            nums[zp++] = 0;
+    }
