@@ -1,0 +1,10 @@
+// Majority Element //
+int majorityElement(vector<int>& nums) {
+        int cnt = 0, ele = 0;
+        for(int num : nums){
+            if(cnt == 0)
+                ele = num;
+            cnt += (num == ele) ? 1 : -1;
+        }
+        return ele;
+    }
