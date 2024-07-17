@@ -1,5 +1,7 @@
 // Subarray sum equals k //
-int subarraySum(vector<int>& nums, int k) {
+class Solution {
+public:
+    int subarraySum(vector<int>& nums, int k) {
         int ans = 0;
         vector<int> prefixSum(nums.size(), -1);
         prefixSum[0] = nums[0];
@@ -15,3 +17,4 @@ int subarraySum(vector<int>& nums, int k) {
         }
         return ans;
     }
+};
